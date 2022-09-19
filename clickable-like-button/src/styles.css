@@ -1,0 +1,77 @@
+:root {
+    --grey: grey;
+    --red: red;
+    --white: #fff;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.hide {
+    display: none;
+}
+
+.like-btn {
+    display: flex;
+    border: 1px solid var(--grey);
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    width: 110px;
+    height: 40px;
+}
+
+.like-btn span {
+    font-weight: bold;
+    color: var(--grey);
+}
+
+.like-btn svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    color: var(--grey);
+}
+
+.like-btn .fa-spinner {
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    color: var(--grey);
+}
+
+.like-btn:hover {
+    border-color: var(--red);
+    cursor: pointer;
+}
+
+.like-btn:hover svg {
+    color: var(--red);
+}
+
+.like-btn:hover .fa-spinner {
+    color: var(--red);
+}
+
+.like-btn:hover span {
+    color: var(--red);
+}
+
+.like-btn.liked {
+    border-color: var(--red);
+    background-color: var(--red);
+}
+
+.like-btn.liked svg {
+    color: var(--white);
+}
+
+.like-btn.liked .fa-spinner {
+    color: var(--white);
+}
+
+.like-btn.liked span {
+    color: var(--white);
+}

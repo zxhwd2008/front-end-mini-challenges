@@ -1,0 +1,21 @@
+body {
+    font-family: sans-serif;;
+}
+
+ul.directory-tree-container li {
+    list-style: none;
+}
+
+ul.directory-tree-container li i {
+    width: 1em;
+    margin-right: 6px;
+}
+
+ul.nested {
+    display: none;
+    padding-inline-start: 1em;
+}
+
+.fa-angle-right:hover, .fa-angle-down:hover {
+    cursor: pointer;
+}

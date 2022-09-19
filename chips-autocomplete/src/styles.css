@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --gray: gray;
+    --lightgray: lightgray;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.chips-container {
+    display: flex;
+    column-gap: 12px;
+    row-gap: 6px;
+    flex-wrap: wrap;
+    max-width: 600px;
+    align-items: center;
+}
+
+.chips-container .search-wrapper {
+    width: 12em;
+    row-gap: 6px;
+    position: relative;
+}
+
+.search-wrapper .search-options {
+    top: 3em;
+    border: 1px solid var(--lightgray);
+    border-radius: .5em;
+    width: 12em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 6px;
+    padding: 1em 0 1em 0;
+    position: absolute;
+}
+
+.search-wrapper .search-options .search-row {
+    display: flex;
+    column-gap: 6px;
+    align-items: center;
+    width: 100%;
+    padding: .3em 0 .3em 6px;
+}
+
+.search-wrapper .search-options .search-row.selected {
+    background-color: var(--lightgray);
+    pointer-events: none;
+}
+
+.search-wrapper .search-options .search-row:hover {
+    cursor: pointer;
+    background-color: var(--lightgray);
+}
+
+.search-wrapper .search-options .search-row img {
+    border-radius: 50%;
+}
+
+.search-wrapper .search-chips {
+    width: 12em;
+    height: 2.5em;
+    border-width: 0;
+}
+
+.search-wrapper .search-chips:focus-visible {
+    outline: 0;
+}
+
+.chip {
+    min-width: 12em;
+    display: flex;;
+    column-gap: 0.5em;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--lightgray);
+    border-radius: 1em;
+    padding: 0.5em 0 0.5em 0;
+}
+
+.chip:hover {
+    background-color: var(--lightgray);
+}
+
+.chip .remove {
+    cursor: pointer;
+}
+
