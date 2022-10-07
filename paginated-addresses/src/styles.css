@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    width: 800px;
+}
+
+.container .table-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container table {
+    /* table-layout: fixed; */
+    border-collapse: collapse;
+    margin-bottom: 1em;
+    width: 100%;
+    text-align: center;
+}
+
+.container table thead th {
+    cursor: pointer;
+}
+
+.pagination {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    column-gap: 6px;
+}
+
+.pagination button {
+    border: 0;
+    background: #fff;
+    cursor: pointer;
+}
+
+.pagination button.disabled {
+    cursor: auto;
+}
+
+.pagination button.disabled i {
+    color: lightgray;
+}
