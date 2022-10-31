@@ -31,6 +31,8 @@ class DirectoryTree {
         this.#container = document.createElement('ul');
         this.#container.classList.add('directory-tree-container');
         this.#createFileList(this.#container, this.#fileList);
+
+        this.#container.addEventListener('click', this.#onClick.bind(this));
         body.appendChild(this.#container);
     }
 
@@ -55,17 +57,14 @@ class DirectoryTree {
         const fileType = fileTypeName || fileName.split('.')[1];
         const fileTypeClassNames = this.#fileTypes[fileType] || this.#fileTypes.default;
 
+        const listContent = document.createElement('a');
+        listContent.setAttribute('href', 'javascript:void(0)');
+
         const icon = document.createElement('i');
         icon.classList.add(...fileTypeClassNames.split(' '));
-        if (fileTypeName === 'right') {
-            icon.addEventListener('click', this.#onClick.bind(this));
-        }
 
-        const span = document.createElement('span');
-        span.textContent = fileName;
-
-        list.appendChild(icon);
-        list.appendChild(span);
+        listContent.append(icon, fileName);
+        list.append(listContent);
         root.appendChild(list);
 
         return list;
@@ -85,11 +84,21 @@ class DirectoryTree {
     }
 
     #onClick(e) {
-        const icon = e.currentTarget;
-        const folder = icon.parentElement.querySelector('ul.nested');
-        folder.style.display = folder.style.display === 'block' ? 'none' : 'block';
+        const list = e.target.closest('li');
+        if (!list) {
+            return;
+        }
+
+        const icon = list.querySelector('i');
+        const folder = list.querySelector('ul.nested');
+
+        if (!folder) {
+            return;
+        }
+
+        folder.classList.toggle('show');
         
-        if (folder.style.display === 'block') {
+        if (folder.classList.contains('show')) {
             icon.classList.remove(...this.#fileTypes.right.split(' '));
             icon.classList.add(...this.#fileTypes.down.split(' '));
         } else {

@@ -3,9 +3,9 @@ body {
 }
 
 .modal-overlay {
+    position: fixed;
     width: 100vw;
     height: 100vh;
-    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;

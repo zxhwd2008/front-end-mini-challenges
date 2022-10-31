@@ -1,5 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: sans-serif;
+    font-size: 16px;
 }
 
 .hide {
@@ -11,7 +16,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 50vh;
 }
 
 .container .row-wrapper {
@@ -26,11 +30,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.cell svg {
-    width: 2em;
-    height: 2em;
 }
 
 .cell:hover {

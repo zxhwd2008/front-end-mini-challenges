@@ -1,18 +1,16 @@
 body {
-    font-family: sans-serif;
-  }
-  
-  .star-icon {
-    --icon-size: 32px;
-    height: var(--icon-size);
-    width: var(--icon-size);
-  }
-  
-  .star-icon :hover {
-    cursor: pointer;
-  }
-  
-  .star-icon-filled {
-    fill: yellow;
-  }
+  font-family: sans-serif;
+}
+
+.fa-star {
+  display: inline-block;
+}
+
+.fa-star:hover {
+  cursor: pointer;
+}
+
+.yellow {
+  color: orange;
+}
   

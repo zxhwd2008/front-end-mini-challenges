@@ -1,0 +1,86 @@
+:root {
+    --white: #fff;
+    --gray: #555;
+    --lightblue: #5BC0DE;
+    --lightgray: lightgray;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+ul.menu-wrapper li {
+    list-style: none;
+    position: relative;
+}
+
+ul.menu-wrapper a {
+    text-decoration: none;
+}
+
+ul.menu-wrapper a i {
+    margin-left: 6px;
+}
+
+ul.menu-wrapper > li {
+    display: inline-block;
+}
+
+ul.menu-wrapper > li > ul {
+    position: absolute;
+}
+
+ul.menu-wrapper > li > ul ul {
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+ul.menu-wrapper li a {
+    text-align: center;
+    line-height: 2em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-decoration: none;
+    display: block;
+    height: 2em;
+    width: 150px;
+    color: var(--white);
+    background-color: var(--gray);
+}
+
+ul.menu-wrapper > li > a {
+    border: none;
+    color: var(--lightblue);
+    background-color: var(--white);
+}
+
+ul.menu-wrapper li.active a, ul.menu-wrapper li a:hover {
+    background-color: var(--gray);
+    color: var(--white);
+    cursor: pointer;
+}
+
+ul.menu-wrapper li a:hover {
+    background-color: var(--lightgray);
+}
+
+ul.menu-wrapper ul.nested {
+    visibility: hidden;
+}
+
+ul.menu-wrapper ul.nested.show {
+    visibility: visible;
+}

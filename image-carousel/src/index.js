@@ -1,5 +1,6 @@
 // CSS的animation和其他的
 // scrol的算法
+// this.slider.style.maxWidth = `${this.#options.width || this.#default.width}px`;
 class ImageSlider {
     #options;
     #default;
@@ -42,11 +43,11 @@ class ImageSlider {
 
         const btnScrollLeft = document.createElement('i');
         btnScrollLeft.classList.add('fa', 'fa-chevron-left', 'fa-2x', 'btn-scroll-left');
-        btnScrollLeft.addEventListener('click', this.#scroll.bind(this, -1));
+        btnScrollLeft.addEventListener('click', this.#scroll.bind(this, 1));
 
         const btnScrollRight = document.createElement('i');
         btnScrollRight.classList.add('fa', 'fa-chevron-right', 'fa-2x', 'btn-scroll-right');
-        btnScrollRight.addEventListener('click', this.#scroll.bind(this, 1));
+        btnScrollRight.addEventListener('click', this.#scroll.bind(this, -1));
 
         this.slider.appendChild(btnScrollLeft);
         this.slider.appendChild(btnScrollRight);

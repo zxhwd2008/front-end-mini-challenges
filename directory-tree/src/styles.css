@@ -1,9 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: sans-serif;;
+    font-family: sans-serif;
+    font-size: 16px;
 }
 
 ul.directory-tree-container li {
     list-style: none;
+}
+
+ul.directory-tree-container li a {
+    text-decoration: none;
+    color: black;
 }
 
 ul.directory-tree-container li i {
@@ -14,6 +24,10 @@ ul.directory-tree-container li i {
 ul.nested {
     display: none;
     padding-inline-start: 1em;
+}
+
+ul.nested.show {
+    display: block;
 }
 
 .fa-angle-right:hover, .fa-angle-down:hover {
