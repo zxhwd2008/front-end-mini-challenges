@@ -35,6 +35,7 @@ class ImageSlider {
             slide.classList.add('slide');
             
             const img = document.createElement('img');
+            // img.loading = 'lazy';
             img.src = imgSrc;
 
             slide.appendChild(img);
